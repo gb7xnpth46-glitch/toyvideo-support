@@ -6,94 +6,50 @@
     <title>Toy Video AI - Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #fafafa; }
-        h1 { font-size: 28px; margin-bottom: 8px; color: #1a1a1a; }
-        h2 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; color: #1a1a1a; }
-        h3 { font-size: 16px; margin-top: 20px; margin-bottom: 8px; color: #333; }
-        p { margin-bottom: 12px; }
-        .date { color: #666; margin-bottom: 24px; font-size: 14px; }
-        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        ul { margin-left: 20px; margin-bottom: 12px; }
-        li { margin-bottom: 6px; }
-        a { color: #007AFF; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #fafafa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+        .updated { font-size: 14px; color: #888; margin-bottom: 32px; }
+        h2 { font-size: 20px; font-weight: 600; margin-top: 28px; margin-bottom: 12px; color: #1a1a2e; }
+        p { margin-bottom: 14px; color: #444; }
+        ul { margin-bottom: 14px; padding-left: 24px; }
+        li { margin-bottom: 6px; color: #444; }
+        .highlight {
+            background: #f0ecff;
+            border-left: 4px solid #7c6bc4;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+        .highlight p { margin-bottom: 0; }
+        a { color: #7c6bc4; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: #999; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: April 3, 2026</p>
+    <p class="updated">Toy Video AI &mdash; Last updated: April 17, 2026</p>
 
-    <p>Toy Video AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+    <p>Toy Video AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what data we collect, how we use it, and who we share it with.</p>
 
-    <h2>1. Information We Collect</h2>
-
-    <h3>Camera and Photo Data</h3>
-    <p>Toy Video AI uses your device's <strong>rear-facing camera solely to capture images of physical toys</strong> for the purpose of AI video generation. The app does not use the front-facing camera, does not perform facial recognition or detection, and does not collect any biometric data, including face data. No facial analysis technology (such as ARKit Face Tracking, Vision face detection, or any third-party facial recognition service) is implemented in the app.</p>
-    <p>Captured toy images are stored locally on your device and are temporarily transmitted to our servers for the sole purpose of generating animated videos. Images are not permanently retained on our servers after video generation is complete.</p>
-
-    <h3>No Face Data Collection</h3>
-    <p>We want to be explicitly clear: <strong>Toy Video AI does not collect, process, analyze, store, or share any face data or biometric information.</strong> The app is designed exclusively for photographing toys and inanimate objects. We do not use any technology capable of detecting, recognizing, or tracking human faces.</p>
-
-    <h3>Purchase Information</h3>
-    <p>When you make in-app purchases (Magic Dust packs), the transaction is processed entirely by Apple through the App Store. We do not collect, store, or have access to your payment information, credit card details, or Apple ID credentials. We only receive a transaction confirmation from Apple to credit your account with the purchased Magic Dust.</p>
-
-    <h3>Locally Stored Data</h3>
-    <p>The app stores the following data locally on your device using UserDefaults:</p>
+    <h2>1. Data We Collect</h2>
+    <p>Toy Video AI collects and processes the following data:</p>
     <ul>
-        <li>Your Magic Dust balance</li>
-        <li>Toy profile images you have captured</li>
-        <li>Generated video thumbnails and metadata</li>
-        <li>App preferences and settings</li>
+        <li><strong>Toy Photos</strong> &mdash; Images you take or select from your photo library to create animated videos.</li>
+        <li><strong>Scene Descriptions</strong> &mdash; The text prompts (scenario titles or custom descriptions) you choose for video generation.</li>
     </ul>
-    <p>This data is stored only on your device and is not transmitted to any server except as described in this policy.</p>
-
-    <h2>2. How We Use Your Information</h2>
-    <p>We use the information we collect solely for the following purposes:</p>
-    <ul>
-        <li>To generate AI-animated videos from your toy images</li>
-        <li>To process and track your Magic Dust balance for in-app purchases</li>
-        <li>To save your toy profiles and generated videos locally on your device</li>
-    </ul>
-
-    <h2>3. Third-Party Services</h2>
-    <p>Toy Video AI uses the following third-party services:</p>
-
-    <h3>xAI Grok (via fal.ai)</h3>
-    <p>We use the xAI Grok Imagine Video API to generate animated videos from your toy images. When you request a video generation, the toy image and a text prompt describing the animation scenario are sent to the xAI API through our Firebase Cloud Functions backend. No personal data, face data, or user identifiers are included in these requests. xAI's privacy policy can be found at <a href="https://x.ai/legal/privacy-policy">https://x.ai/legal/privacy-policy</a>.</p>
-
-    <h3>Firebase Cloud Functions</h3>
-    <p>We use Google Firebase Cloud Functions as our backend service to securely relay requests between the app and the AI video generation service. Firebase does not store your images permanently. Google's privacy policy can be found at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
-
-    <h2>4. Data Sharing and Disclosure</h2>
-    <p>We do not sell, trade, or rent your personal information to third parties. Toy images are shared only with the xAI Grok API through our secure backend for the purpose of video generation, as described above. We do not share any face data with any party because we do not collect face data.</p>
-
-    <h2>5. Data Retention</h2>
-    <ul>
-        <li><strong>On your device:</strong> Toy images, video data, and preferences are stored locally until you delete them or uninstall the app.</li>
-        <li><strong>On our servers:</strong> Toy images are processed in real-time and are not permanently stored on our backend servers. Generated videos are temporarily accessible via URL from the AI provider for a limited period.</li>
-        <li><strong>Face data:</strong> Not applicable — no face data is collected or retained at any time.</li>
-    </ul>
-
-    <h2>6. Data Security</h2>
-    <p>We implement appropriate technical measures to protect your information. All data transmission between the app and our backend servers uses HTTPS encryption. API keys and credentials are stored securely using Firebase Secrets.</p>
-
-    <h2>7. Children's Privacy</h2>
-    <p>Toy Video AI is designed to be family-friendly and suitable for use by children. The app does not knowingly collect personal information from children. All data processing is limited to toy images as described in this policy. Parents or guardians can contact us to request deletion of any data associated with their child's use of the app.</p>
-
-    <h2>8. Your Rights</h2>
-    <p>You have the right to:</p>
-    <ul>
-        <li>Delete your locally stored data at any time by removing toy profiles within the app or uninstalling the app</li>
-        <li>Request information about any data we may have processed</li>
-        <li>Contact us with privacy-related questions or concerns</li>
-    </ul>
-
-    <h2>9. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-    <p>Email: <a href="mailto:info@regulex-legal.com">info@regulex-legal.com</a></p>
-</div>
-</body>
-</html>
+    <p>We do <strong>not</strong> collect:
